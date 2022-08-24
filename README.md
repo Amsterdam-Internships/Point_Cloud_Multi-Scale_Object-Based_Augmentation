@@ -22,6 +22,11 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
 
 
 ## Usage
+- Generate augmented point clouds with MOBA (or benchmark augmentation methods)
+  ```sh
+  python3 generate_augmented_pc.py
+   ```
+
 - Prepare the dataset to train, evaluate and test a model
   ```sh
   python3 prepare.py --mode 'train' --in_folder 'raw_files/' --out_folder 'dataset_input/train_npz/'
@@ -32,6 +37,7 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
   The following command line arguments are available for preparation:
    - `--in_folder` is the folder with the raw point cloud files.
    - `--out_folder` is the folder to write the prepared point cloud files to.
+   - `--add_normals` is an optional argument that includes normals as features to the prepared files. These normals need to be in the raw files and can be added with the ```add_normals_to_pc.py``` file.
 
 - Train a model
 
@@ -43,18 +49,12 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
   - `--in_folder` is the folder with prepared train files.
   - `--resume` is an optional argument that allows to continue training a model that has already been trained for 1 or more epochs.
   - `--resume_path` is an optional argument that specifies the folder containing the model to continue training if `--resume` is passed as argument. If `--resume_path` is not passed, it will continue training on the last trained model.
+  - `--add_normals` is an optional argument that allows to train models with normals as features. Tese normals should be included in the prepared point clouds.
+  - `--split` sets the train/val/test split that is used. Currently, this can be set as either 1,2 or 3.
+  - `--add_augmented_tiles` is an optional argument that needs to be set to train models on additional augmented tiles.
+  - `--augmentation_type` sets the type of augmentation the model can be trained on. Currently, this is either MOBA, ROTATION, TRANSLATION or SCALING.
+  - `--cb_focal_loss` is an optional argument that allows to train the model with Class-Balanced Focal Loss.
   
-- Evaluate a trained model
-
-  ```sh
-  python3 main.py --mode 'evaluate_only' --model "RandLANet" --in_folder 'dataset_input/train_npz/0/' --resume --resume_path 'path/to/snapshots/trained/model/'
-   ```
-  The following command line arguments are available training:
-  - `--model` can be 'RandLANet','SCFNet' or 'RandLANet_CGA', currently.
-  - `--in_folder` is the folder with prepared train files.
-  - `--resume` is a required argument that ensures we can select a trained model.
-  - `--resume_path` is an optional argument that specifies the folder containing the model to evaluate. If `--resume_path` is not passed, it will evaluate the last trained model.
-
 - Test a model
 
   ```sh
@@ -66,6 +66,8 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
   - `--out_folder` specifies the folder to write the files with predicted segmentations to.
   - `--snap_folder` is an optional argument that specifies the folder containing the model to test. If `--snap_folder` is not passed, it will test the trained model that was created the latest.
   - `--resume` is an optional argument that allows to skip test files in `--out_folder` that have already been predicted.
+  - `--add_normals` is an optional argument that allows to train models with normals as features. Tese normals should be included in the prepared point clouds.
+  - `--split` sets the train/val/test split that is used. Currently, this can be set as either 1,2 or 3.
 
 - Merge predictions from tested model with original Point Cloud tiles.
 
