@@ -8,13 +8,12 @@ This code has been tested with Python 3.7, Tensorflow 1.15.5, CUDA 11.2 on Ubunt
 1. Clone this repository
 
   ```sh
-  git clone https://github.com/Amsterdam-AI-Team/RandLA-Net.git
+  git clone https://github.com/Amsterdam-Internships/Point_Cloud_Multi-Scale_Object-Based_Augmentation.git
   ```
 
 2. Install all Python dependencies
 
   ```sh
-  cd RandLA-Net
   pip install -r requirements.txt
   ```
 
