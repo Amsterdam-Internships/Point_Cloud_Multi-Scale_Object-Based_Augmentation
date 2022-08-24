@@ -1,5 +1,9 @@
 # MOBA: Multi-Scale Object-Based Augmentation for Imbalanced Point Clouds
 
+<p align="center"> <img src="https://i.ibb.co/tQYzSKS/Schermafbeelding-2022-08-24-om-11-49-34.png" width="100%"> </p>
+
+
+
 This repository contains Tensorflow implementations of [RandLANet](http://arxiv.org/abs/1911.11236), [SCFNet](https://ieeexplore.ieee.org/document/9577763) and [RandLA-Net with CGA](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_CGA-Net_Category_Guided_Aggregation_for_Point_Cloud_Semantic_Segmentation_CVPR_2021_paper.html) with small improvements to the [original RandLANet](https://github.com/QingyongHu/RandLA-Net), [original SCFNet](https://github.com/leofansq/SCF-Net) and [original RandLANet with CGA](https://github.com/MCG-NJU/CGA-Net) implementations. This repository only supports the 3D Point Cloud licensed to City of Amsterdam.
 
 ## Preparation
