@@ -125,8 +125,8 @@ class Amsterdam3D:
                     in_folder = base_folder + 'train_tiles_translation/0/' + addition
                 elif 'SCALING' in full_name:
                     in_folder = base_folder + 'train_tiles_scaling/0/' + addition
-                elif 'CROP' in full_name:
-                    in_folder = base_folder + 'train_tiles_crop/0/' + addition
+                elif 'MOBA' in full_name:
+                    in_folder = base_folder + 'train_tiles_moba/0/' + addition
             else:
                 in_folder = base_folder + 'train_tiles_regular/0/' + addition
 
@@ -174,8 +174,8 @@ class Amsterdam3D:
                     in_folder = base_folder + 'train_tiles_translation/0/' + addition
                 elif 'SCALING' in full_name:
                     in_folder = base_folder + 'train_tiles_scaling/0/' + addition
-                elif 'CROP' in full_name:
-                    in_folder = base_folder + 'train_tiles_crop/0/' + addition
+                elif 'MOBA' in full_name:
+                    in_folder = base_folder + 'train_tiles_MOBA/0/' + addition
             else:
                 in_folder = base_folder + 'train_tiles_regular/0/' + addition
 
@@ -454,10 +454,8 @@ if __name__ == '__main__':
         cfg = ConfigAmsterdam3D_SCFNet
     elif str(args.model) == 'CGANet':
         cfg = ConfigAmsterdam3D_CGANet
-    elif str(args.model) == 'GANet':
-        cfg = ConfigAmsterdam3D_GANet
     else:
-        print("Please provide correct model name. Either RandLANet, SCFNet, CGANet or GANet. Aborting...")
+        print("Please provide correct model name. Either RandLANet, SCFNet or CGANet. Aborting...")
         sys.exit(1)
 
     # in_folder = join(args.in_folder, f'input_{cfg.sub_grid_size:.3f}')
@@ -479,8 +477,8 @@ if __name__ == '__main__':
             in_files = regular_files + glob.glob(join(in_folder + '/train_tiles_translation/0/' + addition, '*.npz'))
         elif args.augmentation_type == 'SCALING':
             in_files = regular_files + glob.glob(join(in_folder + '/train_tiles_scaling/0/' + addition, '*.npz'))
-        elif args.augmentation_type == 'CROP':
-            in_files = regular_files + glob.glob(join(in_folder + '/train_tiles_crop/0/' + addition, '*.npz'))
+        elif args.augmentation_type == 'MOBA':
+            in_files = regular_files + glob.glob(join(in_folder + '/train_tiles_moba/0/' + addition, '*.npz'))
 
     else:
         in_files = regular_files
