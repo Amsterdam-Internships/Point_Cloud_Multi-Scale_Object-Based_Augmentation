@@ -22,7 +22,7 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
 
 
 ## Usage
-- Generate augmented point clouds with MOBA (or benchmark augmentation methods)
+- Generate augmented point clouds with MOBA (or a benchmark augmentation method)
   ```sh
   python3 generate_augmented_pc.py
    ```
