@@ -49,7 +49,7 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
   python3 main.py --mode 'train' --model "RandLANet" --in_folder 'dataset_input/train_npz/0/' 
    ```
   The following command line arguments are available training:
-  - `--model` can be 'RandLANet','SCFNet' or 'RandLANet_CGA', currently.
+  - `--model` can be 'RandLANet','SCFNet' or 'CGANet', currently.
   - `--in_folder` is the folder with prepared train files.
   - `--resume` is an optional argument that allows to continue training a model that has already been trained for 1 or more epochs.
   - `--resume_path` is an optional argument that specifies the folder containing the model to continue training if `--resume` is passed as argument. If `--resume_path` is not passed, it will continue training on the last trained model.
@@ -65,7 +65,7 @@ The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the en
   python3 main.py --mode 'test' --model "RandLANet" --in_folder 'dataset_input/test_npz/0/' --out_folder 'dataset_input/predicted_laz/RandLANet/0/'
    ```
   The following command line arguments are available testing:
-  - `--model` can be 'RandLANet', 'SCFNet' or 'RandLANet', currently.
+  - `--model` can be 'RandLANet', 'SCFNet' or 'CGANet', currently.
   - `--in_folder` is the folder with prepared test files.
   - `--out_folder` specifies the folder to write the files with predicted segmentations to.
   - `--snap_folder` is an optional argument that specifies the folder containing the model to test. If `--snap_folder` is not passed, it will test the trained model that was created the latest.
