@@ -11,11 +11,9 @@ import sys
 from core.models.RandLANet import Network as RandLANet
 from core.models.SCFNet import Network as SCFNet
 from core.models.CGANet import Network as CGANet
-from core.models.GANet import Network as GANet
 
 
 from core.tester import ModelTester
-from calculate_clusters import CalculateClusters # ADDED
 from core.helpers.helper_tool import DataProcessing as DP
 import core.helpers.helper_filelists as utils
 
