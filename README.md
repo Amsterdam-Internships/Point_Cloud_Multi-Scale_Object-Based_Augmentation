@@ -1,6 +1,6 @@
 # MOBA: Multi-Scale Object-Based Augmentation for Imbalanced Point Clouds
 
-<p align="center"> <img src="https://i.ibb.co/tQYzSKS/Schermafbeelding-2022-08-24-om-11-49-34.png" width="100%"> </p>
+<p align="center"> <img src="https://i.ibb.co/tQYzSKS/Schermafbeelding-2022-08-24-om-11-49-34.png" width="800%"> </p>
 
 
 
