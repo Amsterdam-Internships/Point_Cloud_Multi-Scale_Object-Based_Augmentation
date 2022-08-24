@@ -196,12 +196,12 @@ def rotate_object(coordinates, cluster_point_idxs, degree_limit_object_rotation)
 class_names = {4: 'street_light', 5: 'street_sign', 6: 'traffic_light', 8: 'city_bench', 9: 'rubbish_bin'}
 class_label = 9 # label of object of interest to crop tile for.
 tilecodes = []
-tile_radius = 10 # radius of tile.
+tile_radius = 10 # radius of tile for MOBA. set to 10**6 if MOBA should not be used.
 translation_factor_limits = [-20,20] # maximum translation in x and y direction.
 scaling_factor_limits = [0.85, 1.15] # world scaling factor to scale complete tile.
 degree_limit_tile_rotation = 360 # maximum rotation degree of complete tile.
 degree_limit_object_rotation = 180 # maximum rotation degree of object of interest.
-augm_type = '' 
+augm_type = '' # augmentation type. should be set as ROTATION, TRANSLATION, SCALING or MOBA, depending on configuration.
 reproduce_percentage = 1 # probability to make new tile out of object of interest. range 0-1.
 parameters = [class_label, tile_radius, translation_factor_limits, scaling_factor_limits, degree_limit_tile_rotation,
                 reproduce_percentage, augm_type]
