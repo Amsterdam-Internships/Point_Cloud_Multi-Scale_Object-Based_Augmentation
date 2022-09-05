@@ -1,10 +1,12 @@
 # MOBA: Multi-Scale Object-Based Augmentation for Imbalanced Point Clouds
 
-<p align="center"> <img src="https://i.ibb.co/tQYzSKS/Schermafbeelding-2022-08-24-om-11-49-34.png" width="800%"> </p>
+This repository contains the code utilized and writting as part of the MSc Artificial Intelligence Thesis at the UvA in collaboration with the City of Amsterdam. The aim of this project was to improve the mapping of underrepresented urban topographical object properties in imbalanced urban point clouds using deep-learning semantic segmentation models. From such urban mappings, useful insights can be gathered. For example, information on the region-based density of trash cans in neighborhoods or misalignment of traffic lights on roadsides can be collected. To this end, Multi-Scale Object-Based Augmentation (MOBA) was introduced. MOBA is a memory-efficient augmentation technique that crops point clouds around minority objects using multiple radii, enabling models to learn better minority class features (i.e., features of underrepresented urban topographical object properties) from both local and global point cloud information. An example of MOBA is given below.
 
 
+<p align="center"> <img src="https://i.ibb.co/rMLmcV6/moba.png" width="800%"> </p>
 
-This repository contains Tensorflow implementations of [RandLANet](http://arxiv.org/abs/1911.11236), [SCFNet](https://ieeexplore.ieee.org/document/9577763) and [RandLA-Net with CGA](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_CGA-Net_Category_Guided_Aggregation_for_Point_Cloud_Semantic_Segmentation_CVPR_2021_paper.html) with small improvements to the [original RandLANet](https://github.com/QingyongHu/RandLA-Net), [original SCFNet](https://github.com/leofansq/SCF-Net) and [original RandLANet with CGA](https://github.com/MCG-NJU/CGA-Net) implementations. This repository only supports the 3D Point Cloud licensed to City of Amsterdam.
+
+Besides the code for MOBA, this repository contains modified Tensorflow implementations of [RandLANet](http://arxiv.org/abs/1911.11236), [SCFNet](https://ieeexplore.ieee.org/document/9577763) and [RandLA-Net with CGA](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_CGA-Net_Category_Guided_Aggregation_for_Point_Cloud_Semantic_Segmentation_CVPR_2021_paper.html) to test MOBA and compare MOBA to benchmark augmentation methods. Furhtermore, this repository is designed to support the 3D Point Cloud licensed to City of Amsterdam, but can be used for other point cloud datasets as well.
 
 ## Preparation
 This code has been tested with Python 3.7, Tensorflow 1.15.5, CUDA 11.2 on Ubuntu 18.04.
