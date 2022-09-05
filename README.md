@@ -6,7 +6,7 @@ This repository contains the code utilized and writting as part of the MSc Artif
 <p align="center"> <img src="https://i.ibb.co/rMLmcV6/moba.png" width="800%"> </p>
 
 
-Besides the code for MOBA, this repository contains modified Tensorflow implementations of [RandLANet](http://arxiv.org/abs/1911.11236), [SCFNet](https://ieeexplore.ieee.org/document/9577763) and [RandLA-Net with CGA](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_CGA-Net_Category_Guided_Aggregation_for_Point_Cloud_Semantic_Segmentation_CVPR_2021_paper.html) to test MOBA and compare MOBA to benchmark augmentation methods. Furhtermore, this repository is designed to support the 3D Point Cloud licensed to City of Amsterdam, but can be used for other point cloud datasets as well. 
+Besides the code for MOBA, this repository contains modified Tensorflow implementations of [RandLANet](http://arxiv.org/abs/1911.11236), [SCFNet](https://ieeexplore.ieee.org/document/9577763) and [CGA-Net](https://openaccess.thecvf.com/content/CVPR2021/html/Lu_CGA-Net_Category_Guided_Aggregation_for_Point_Cloud_Semantic_Segmentation_CVPR_2021_paper.html) to test MOBA and compare MOBA to benchmark augmentation methods. Furhtermore, this repository is designed to support the 3D Point Cloud licensed to City of Amsterdam, but can be used for other .laz/las point cloud datasets as well. 
 
 Thesis can be found [here](https://scripties.uba.uva.nl/search?id=record_49892).
 
