@@ -24,6 +24,12 @@ This code has been tested with Python 3.7, Tensorflow 1.15.5, CUDA 11.2 on Ubunt
   ```sh
   pip install -r requirements.txt
   ```
+3. Build RandLa-Net, SCF-Net and CGA-Net
+
+  ```sh
+  cd utils
+  sh compile_op.sh
+  ```
 
 ### Dataset
 The City of Amsterdam acquired a street-level 3D Point Cloud encompassing the entire municipal area. The point cloud, provided by Cyclomedia Technology, is recorded using both a panoramic image capturing device together with a Velodyne HDL-32 LiDAR sensor, resulting in a point cloud that includes not only <x, y, z> coordinates, but also RGB and intensity data. The 3D Point Cloud is licensed, but it may become open in the future. An example tile is available [here](https://github.com/Amsterdam-AI-Team/Urban_PointCloud_Processing/tree/main/datasets/pointcloud).
