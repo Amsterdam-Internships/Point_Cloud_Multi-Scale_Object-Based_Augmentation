@@ -68,15 +68,7 @@ def generate_augmented_tiles(tilecodes, parameters, translation=False, scaling=F
                     max_x_cropped_tile = min(mean_x + tile_radius, max(np.asarray(laz_file.x)))
                     min_y_cropped_tile = max(mean_y - tile_radius, min(np.asarray(laz_file.y)))
                     max_y_cropped_tile = min(mean_y + tile_radius, max(np.asarray(laz_file.y)))
-                    condition = ((all_x>=min_x_cropped_tile) & (all_x<=max_x_cropped_tile) & (all_y>=min_y_cropped_tile) & (all_y<=max_y_cropped_tile))
-                    
-                    mean_z = round(np.mean(cluster_points[:,2]),2)
-                    min_z_cropped_tile = max(mean_z - tile_radius, min(np.asarray(laz_file.z)))
-                    max_z_cropped_tile = min(mean_z + tile_radius, max(np.asarray(laz_file.z)))
-                    condition = ((all_x>=min_x_cropped_tile) & (all_x<=max_x_cropped_tile) & 
-                                    (all_y>=min_y_cropped_tile) & (all_y<=max_y_cropped_tile) &
-                                    (all_z>=min_z_cropped_tile) & (all_z<=max_z_cropped_tile))
-                    
+                    condition = ((all_x>=min_x_cropped_tile) & (all_x<=max_x_cropped_tile) & (all_y>=min_y_cropped_tile) & (all_y<=max_y_cropped_tile)) 
                     condition_indxs = np.asarray(condition).nonzero()[0]
 
                     # Crop tile
